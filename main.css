@@ -67,6 +67,7 @@ header {
     background: url('img/back.png') no-repeat;
     background-position: center;
     background-size: cover;
+    position: relative;
 
   }
 
@@ -416,6 +417,13 @@ justify-content: space-between;
   padding-right: 30px;
   font-weight: 600;
 
+}
+
+.orb-canvas {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
 }
 
 
