@@ -45,3 +45,19 @@ function increaseNumberAnimationStep (i, element, endNumber) {
     document.querySelector('#form form').removeChild(otherInput); // Задание 4
     }
   });
+
+  function addSmoothScroll(anchor) {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+   
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  }
+   
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    addSmoothScroll(anchor);
+  });
+
+  addSmoothScroll(document.querySelector('.more-button'));
